@@ -1,0 +1,48 @@
+.game-header {
+  align-items: center;
+  background-color: lightgray;
+  box-shadow: 0 0.5px 3px black;
+  color: rgb(20, 20, 20);
+  display: flex;
+  font-weight: 600;
+  justify-content: space-between;
+  padding: 8px 1.5em;
+  width: 100%;
+}
+
+.gravatar-img {
+  border-radius: 50%;
+  box-shadow: 0.7px 1.3px 5px black;
+}
+
+.trivia-img-header {
+  animation: trivia-header 1.5s infinite;
+  width: calc(15% + 5vmin);
+}
+
+.player-infos {
+  align-items: center;
+  border-radius: 3px;
+  box-shadow: 0 0 2px black;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 8px;
+}
+
+.player-infos .text-content:nth-child( 1 ) {
+  box-shadow: 0 0.5px 0 black;
+  margin: 5px 0;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+@keyframes trivia-header {
+
+  48% { transform: none; }
+
+  49% { transform: translate(-3px, 1px) scale(1.01); }
+
+  51% { transform: translate(3px, -1px); }
+
+  52% { transform: none; }
+}
