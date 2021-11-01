@@ -1,23 +1,25 @@
 .game-header {
   align-items: center;
-  background-color: lightgray;
-  box-shadow: 0 0.5px 3px black;
+  border-bottom: 1px solid black;
   color: rgb(20, 20, 20);
   display: flex;
   font-weight: 600;
+  height: 15%;
   justify-content: space-between;
-  padding: 8px 1.5em;
+  padding: 2em 1.5em;
+  padding-left: 6em;
   width: 100%;
 }
 
 .gravatar-img {
   border-radius: 50%;
   box-shadow: 0.7px 1.3px 5px black;
+  width: 4%;
 }
 
 .trivia-img-header {
   animation: trivia-header 1.5s infinite;
-  width: calc(15% + 5vmin);
+  width: 15%;
 }
 
 .player-infos {

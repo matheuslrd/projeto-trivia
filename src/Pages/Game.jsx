@@ -5,7 +5,7 @@ import '../styles/Game.css';
 
 function Game() {
   return (
-    <section>
+    <section className="game-page">
       <Header />
       <Trivia />
     </section>
