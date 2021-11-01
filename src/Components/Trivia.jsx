@@ -183,13 +183,14 @@ class Trivia extends Component {
     const { endGame } = this.state;
     const { results } = this.props;
     return (
-      <section className="game-board">
-        { endGame && <Redirect to="/feedbacks" /> }
-
-        { results.length < 1
-          ? <div className="loading">Carregando...</div>
-          : this.renderGame() }
-      </section>
+      <main className="board-container">
+        <section className="game-board">
+          { endGame && <Redirect to="/feedbacks" /> }
+          { results.length < 1
+            ? <div className="loading">Carregando...</div>
+            : this.renderGame() }
+        </section>
+      </main>
     );
   }
 }

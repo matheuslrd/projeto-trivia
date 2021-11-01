@@ -1,3 +1,9 @@
+.game-page {
+  background: radial-gradient(circle 957px at 8.7% 50.5%, rgba(246, 191, 13, 1) 0%, rgba(249, 47, 47.1) 90%);
+  height: 100vh;
+  width: 100%;
+}
+
 .container-timer {
   align-items: center;
   border-radius: 50%;
@@ -23,14 +29,23 @@
   position: absolute;
 }
 
+.board-container {
+  align-items: center;
+  display: flex;
+  height: 85%;
+  justify-content: center;
+  width: 100%;
+}
+
 .game-board {
   align-items: center;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
   box-shadow: 0 0 1px black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 2% auto 3%;
+  height: 90%;
+  justify-content: flex-start;
   padding: 1em 0;
   width: 65%;
 }
@@ -45,7 +60,7 @@
 
 .question-btn {
   background-color: grey;
-  border: 3px solid;
+  border: 3px solid grey;
   border-radius: 5px;
   color: whitesmoke;
   font-size: 0.75em;
@@ -95,14 +110,6 @@
   font-size: large;
   font-weight: 600;
   letter-spacing: 1px;
-}
-
-@keyframes loading {
-
-  0% {
-    letter-spacing: -8px;
-    opacity: 0.6;
-    } 
 }
 
 @keyframes timer {
