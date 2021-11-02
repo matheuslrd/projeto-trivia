@@ -2,7 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+
 import PlayerCard from '../Components/PlayerCard';
+import Button from '../Components/Button';
+
+import '../styles/Ranking.css'
 
 function Ranking({ ranking }) {
   function sortRanking(a, b) {
@@ -14,17 +18,30 @@ function Ranking({ ranking }) {
   }
 
   return (
-    <section>
-      <h2 data-testid="ranking-title">Ranking</h2>
-      <Link to="/">
-        <button type="button" data-testid="btn-go-home">Home</button>
-      </Link>
-      <section>
-        {ranking.sort(sortRanking).map((player, i) => (
-          <PlayerCard key={ i } player={ player } index={ i } />
-        ))}
+    <main className="ranking-page">
+      <section className="ranking-container">
+        <h2 data-testid="ranking-title">
+          Ranking
+        </h2>
+
+        <section className="ranking-players">
+          {
+            ranking.sort(sortRanking).map((player, i) => (
+              <PlayerCard key={ i } player={ player } index={ i } />
+            ))
+          }
+        </section>
+
+        <Link to="/">
+          <Button
+            dataTestId="btn-go-home"
+            className="btn-go-home"
+          >
+            Home
+          </Button>
+        </Link>
       </section>
-    </section>
+    </main>
   );
 }
 

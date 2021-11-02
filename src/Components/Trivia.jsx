@@ -128,21 +128,23 @@ class Trivia extends Component {
           ? (
             <Button
               key={ index }
-              textButton={ encodeUtf8(question) }
               className="question-btn wrong-answer"
               dataTestId={ `wrong-answer-${index}` }
               onClick={ this.handleAnswerClick }
               disabled={ endQuestion }
-            />)
+            >
+              { encodeUtf8(question) }
+            </Button>)
           : (
             <Button
               key={ index }
-              textButton={ encodeUtf8(question) }
               className="question-btn correct-answer"
               dataTestId="correct-answer"
               onClick={ this.handleCorrectAnswer }
               disabled={ endQuestion }
-            />
+            >
+              { encodeUtf8(question) }
+            </Button>
           )),
     );
   }
@@ -171,10 +173,12 @@ class Trivia extends Component {
           <Button
             dataTestId="btn-next"
             className="btn-next"
-            textButton={ actualQuestion > results.length - 2 ? 'Results'
-              : 'Next Question' }
             onClick={ this.goToNextQuestion }
-          />) }
+          >
+            { actualQuestion > results.length - 2
+              ? 'Results'
+              : 'Next Question' }  
+          </Button>) }
       </>
     );
   }

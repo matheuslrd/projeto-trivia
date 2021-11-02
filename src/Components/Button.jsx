@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function Button(
-  { className, dataTestId, onClick, value, textButton, disabled },
+  { className, dataTestId, onClick, value, children, disabled },
 ) {
   return (
     <button
@@ -13,7 +13,7 @@ export default function Button(
       value={ value }
       disabled={ disabled }
     >
-      { textButton }
+      { children }
     </button>
   );
 }
@@ -22,7 +22,7 @@ Button.propTypes = {
   className: PropTypes.string,
   dataTestId: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  textButton: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
   value: PropTypes.string,
   disabled: PropTypes.bool,
 };

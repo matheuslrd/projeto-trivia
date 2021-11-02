@@ -100,16 +100,18 @@ class Login extends Component {
               <Button
                 dataTestId="btn-play"
                 className="btn-play"
-                onClick={ this.handlePlay }
-                textButton="Jogar"
+                onClick={ this.handlePlay }            
                 disabled={ !disabled }
-              />
+              >
+                Jogar
+              </Button>
               <Button
                 dataTestId="btn-settings"
                 className="btn-settings"
                 onClick={ this.handleSettings }
-                textButton="Configurações"
-              />
+              >
+                Configurações
+              </Button>
             </div>
           </form>
           { redirect && <Redirect to="/game" /> }

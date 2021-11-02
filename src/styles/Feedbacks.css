@@ -14,7 +14,7 @@
 .feedback-card {
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid green;
+  border-radius: 5px;
   display: flex;
   flex-flow: column nowrap;
   height: 80%;
@@ -24,7 +24,6 @@
 
 .feedback-section {
   align-items: center;
-  border: 1px solid blue;
   display: flex;
   flex-flow: column nowrap;
   height: 50%;
@@ -36,4 +35,26 @@
   flex-flow: row nowrap;
   justify-content: space-around;
   width: 80%;
+}
+
+.btn-play-again {
+  background: #ff6600;
+}
+
+.btn-play-again:hover {
+  background: #ff751a;
+}
+
+.btn-ranking {
+  background: #0080ff;
+}
+
+.btn-ranking:hover {
+  background: #1a8cff;
+}
+
+.btns-feedback {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.171);
+  cursor: pointer;
+  transition: all 0.1s ease-out;
 }

@@ -7,10 +7,26 @@ function PlayerCard(
   { player: { name, gravatarEmail, score, index } },
 ) {
   return (
-    <div>
-      <h3 data-testid={ `player-name-${index}` }>{ name }</h3>
-      <img alt={ `Imagem de ${name}` } src={ getProfilePic(gravatarEmail) } />
-      <p data-testid={ `player-score-${index}` }>{ score }</p>
+    <div className="player-card">
+      <h3
+        data-testid={ `player-name-${index}` }
+        className="player-name"
+      >
+        { name }
+      </h3>
+
+      <img
+        className="player-img"
+        alt={ `Imagem de ${name}` }
+        src={ getProfilePic(gravatarEmail) }
+      />
+
+      <p
+        data-testid={ `player-score-${index}` }
+        className="player-score"
+      >
+        { `Score: ${score}` }
+      </p>
     </div>
   );
 }
