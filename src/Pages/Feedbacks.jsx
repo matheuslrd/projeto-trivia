@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+
 import Header from '../Components/Header';
+
 import { saveRanking } from '../Redux/actions';
+
+import '../styles/Feedbacks.css';
 
 class Feedbacks extends Component {
   constructor() {
@@ -35,33 +39,33 @@ class Feedbacks extends Component {
     const { score, assertions } = this.props;
     const THREE = 3;
     return (
-      <section>
+      <main className="feedback-page">
         <Header />
-        <h2 data-testid="feedback-text">Feedbacks</h2>
-        <section className="feedback-section">
-          { assertions < THREE
-            ? <p data-testid="feedback-text">Podia ser melhor...</p>
-            : <p data-testid="feedback-text">Mandou bem!</p> }
-          <p>
-            Acertou:
-            <span data-testid="feedback-total-question">
-              { assertions }
-            </span>
-          </p>
-          <p>
-            Pontos:
-            <span data-testid="feedback-total-score">
-              { score }
-            </span>
-          </p>
+        <section className="feedback-container">
+          <div className="feedback-card">
+            <h2 data-testid="feedback-text">Feedbacks</h2>
+            <section className="feedback-section">
+              { assertions < THREE
+                ? <p data-testid="feedback-text">Podia ser melhor...</p>
+                : <p data-testid="feedback-text">Mandou bem!</p> }
+              <p>
+                { `Acertou: ${assertions}` }
+              </p>
+              <p>
+                  { `Pontos: ${score}` }
+              </p>
+            </section>
+            <section className="feedbacks-buttons">
+              <Link to="/">
+                <button type="button" data-testid="btn-play-again">Play Again</button>
+              </Link>
+              <Link to="/ranking">
+                <button type="button" data-testid="btn-ranking">Ranking</button>
+              </Link>
+            </section>
+          </div>
         </section>
-        <Link to="/">
-          <button type="button" data-testid="btn-play-again">Play Again</button>
-        </Link>
-        <Link to="/ranking">
-          <button type="button" data-testid="btn-ranking">Ranking</button>
-        </Link>
-      </section>
+      </main>
     );
   }
 }

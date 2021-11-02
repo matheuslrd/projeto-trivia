@@ -59,26 +59,28 @@
 }
 
 .question-btn {
-  background-color: grey;
-  border: 3px solid grey;
+  background: #ff6600;
+  border: 3px solid #ff6600;
   border-radius: 5px;
+  box-shadow: 3px 1.5px 5px rgba(0, 0, 0, 0.493);
   color: whitesmoke;
+  cursor: pointer;
   font-size: 0.75em;
   font-weight: 600;
   margin: 0.5em;
+  text-shadow: 1px 0.7px 1.5px rgba(0, 0, 0, 0.753);
   padding: 1em 0;
-  width: 60%;
+  width: 50%;
 }
 
 .question-btn:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .btn-next {
-  background-color: grey;
-  border: 3px solid;
+  background-color: #ffff00;
   border-radius: 5px;
-  color: whitesmoke;
+  color: black;
   font-size: 0.75em;
   font-weight: 600;
   margin: 0.5em;
@@ -88,20 +90,23 @@
 
 .btn-next:hover {
   cursor: pointer;
+  transform: scale(1.02);
   opacity: 0.9;
 }
 
 .correct-answer:disabled {
-  background-color: lightgrey;
-  border: 3px solid rgb(6, 240, 15);
+  background-color: #00bd65;
+  border: 3px solid #00bd65;
   color: black;
+  text-shadow: none;
   transform: none;
 }
 
 .wrong-answer:disabled {
-  background-color: lightgrey;
-  border: 3px solid red;
+  background-color: #bd0000;
+  border: 3px solid	#bd0000;
   color: black;
+  text-shadow: none;
   transform: none;
 }
 

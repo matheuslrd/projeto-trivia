@@ -1,0 +1,39 @@
+.feedback-page {
+  background: radial-gradient(circle 957px at 8.7% 50.5%, rgba(246, 191, 13, 1) 0%, rgba(249, 47, 47.1) 90%);
+  height: 100%;
+  width: 100%;
+}
+
+.feedback-container {
+  align-items: center;
+  display: flex;
+  height: 85%;
+  justify-content: center;
+}
+
+.feedback-card {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid green;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 80%;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.feedback-section {
+  align-items: center;
+  border: 1px solid blue;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 50%;
+  justify-content: space-around;
+}
+
+.feedbacks-buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  width: 80%;
+}

@@ -134,7 +134,7 @@ input {
 }
 
 .login-container .login-form .btn-play:enabled:hover {
-  background-color: rgb(0, 189, 101);
+  background-color: #089151;
   box-shadow: rgba(54, 54, 54, 0.16) 0 1px 4px;
   cursor: pointer;
 }
