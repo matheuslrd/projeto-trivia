@@ -1,0 +1,54 @@
+.ranking-page {
+  align-items: center;
+  background: radial-gradient(circle 957px at 8.7% 50.5%, rgba(246, 191, 13, 1) 0%, rgba(249, 47, 47.1) 90%);
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.ranking-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  text-align: center;
+  padding: 1em;
+  width: 45%;
+}
+
+.ranking-players {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: start;
+}
+
+.player-card {
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.466);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.466);
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 0.9em;
+  justify-content: space-between;
+  margin: 0.5em 0;
+  padding: 1em;
+}
+
+.player-name {
+  width: 40%;
+}
+
+.player-img {
+  width: 10%;
+}
+
+.btn-go-home {
+  background: rgb(9, 179, 99);
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+}
+
+.btn-go-home:hover {
+  background: rgb(11, 207, 116);
+}

@@ -8,6 +8,7 @@ import Header from '../Components/Header';
 import { saveRanking } from '../Redux/actions';
 
 import '../styles/Feedbacks.css';
+import Button from '../Components/Button';
 
 class Feedbacks extends Component {
   constructor() {
@@ -57,10 +58,21 @@ class Feedbacks extends Component {
             </section>
             <section className="feedbacks-buttons">
               <Link to="/">
-                <button type="button" data-testid="btn-play-again">Play Again</button>
+                <Button
+                  dataTestId="btn-play-again"
+                  className="btn-play-again btns-feedback"
+                >
+                  Play Again
+                </Button>
               </Link>
+
               <Link to="/ranking">
-                <button type="button" data-testid="btn-ranking">Ranking</button>
+                <Button
+                  dataTestId="btn-ranking"
+                  className="btn-ranking btns-feedback"
+                >
+                  Ranking
+                </Button>
               </Link>
             </section>
           </div>
